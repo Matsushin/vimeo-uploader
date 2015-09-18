@@ -11,4 +11,4 @@
           .panel-heading
             = link_to movie.title, movie_path(movie)
           .panel-body.text-center
-            %iframe{src: vimeo_player_url(movie.url), frameborder: 0}(webkitallowfullscreen mozallowfullscreen allowfullscreen)
+            %iframe{class: 'movies__movie-block', src: vimeo_player_url(movie.url), frameborder: 0}(webkitallowfullscreen mozallowfullscreen allowfullscreen)
