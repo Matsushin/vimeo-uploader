@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/Matsushin/vimeo_3.git
+  revision: c856bd04e8f4a09d2515e62b0445da260500715e
+  specs:
+    vimeo_3 (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,6 +148,8 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_config (0.4.2)
+      activesupport (>= 3.0)
     rails_serve_static_assets (0.0.4)
     rails_stdout_logging (0.0.4)
     railties (4.2.3)
@@ -214,12 +222,14 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.3)
   rails_12factor
+  rails_config
   rest-client
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   turbolinks
   uglifier (>= 1.3.0)
+  vimeo_3!
   web-console (~> 2.0)
 
 BUNDLED WITH

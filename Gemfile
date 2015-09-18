@@ -14,6 +14,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'font-awesome-rails'
 gem 'rest-client'
+gem 'vimeo_3', :github => 'Matsushin/vimeo_3'
+gem 'rails_config'
 
 group :production, :staging do
   gem 'rails_12factor'
