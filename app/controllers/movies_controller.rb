@@ -17,15 +17,14 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(movie_params)
+    @movie = Movie.new
+    @movie.video_uri = params[:video_uri]
 
     respond_to do |format|
       if @movie.save
         format.html { redirect_to @movie, notice: '動画を投稿しました。' }
-        format.json { render :show, status: :created, location: @movie }
       else
         format.html { render :new }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,11 +50,12 @@ class MoviesController < ApplicationController
   end
 
   private
-    def set_movie
-      @movie = Movie.find(params[:id])
-    end
 
-    def movie_params
-      params.require(:movie).permit(:title, :url)
-    end
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end
+
+  def movie_params
+    params.require(:movie).permit(:title, :url, :video_uri)
+  end
 end

@@ -6,5 +6,9 @@
 
     %h1 動画一覧
     - @movies.each do |movie|
-      %p= movie.title
-      %p= movie.url
+      .col-md-4
+        .panel.panel-default
+          .panel-heading
+            = link_to movie.title, movie.url
+          .panel-body
+            %iframe{src: vimeo_player_url(movie.url), frameborder: 0}
