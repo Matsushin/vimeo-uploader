@@ -5,10 +5,10 @@
       動画を追加する
 
     %h1 動画一覧
-    - @movies.each do |movie|
+    - @movies.order(created_at: :desc).each do |movie|
       .col-md-4
         .panel.panel-default
           .panel-heading
-            = link_to movie.title, movie.url
-          .panel-body
-            %iframe{src: vimeo_player_url(movie.url), frameborder: 0}
+            = link_to movie.title, movie_path(movie)
+          .panel-body.text-center
+            %iframe{src: vimeo_player_url(movie.url), frameborder: 0}(webkitallowfullscreen mozallowfullscreen allowfullscreen)
