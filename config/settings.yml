@@ -2,3 +2,6 @@ vimeo:
   access_token: 197b4ba99482066b73a0a03294150d52
   redirect_url: http://vimeo-uploader.herokuapp.com/movies/create/
   url: https://vimeo.com
+basic_auth:
+  name: ikesan
+  pass: test
